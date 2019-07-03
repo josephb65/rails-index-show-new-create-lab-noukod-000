@@ -46,6 +46,8 @@ Rails.application.routes.draw do
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
+  resources :coupons, only: [:index, :new, :create]
+  get '/coupon/:id', to: 'coupons#show', as: 'coupon'
 
   # Example resource route within a namespace:
   #   namespace :admin do
